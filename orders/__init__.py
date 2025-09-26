@@ -1,0 +1,6 @@
+PENDING = "pending"
+PROCESSING = "processing"
+COMPLETED = "completed"
+CANCELLED = "cancelled"
+
+DEFAULT_STATUSES = [PENDING, PROCESSING, COMPLETED, CANCELLED]
