@@ -1,7 +1,10 @@
-from django.urls import path
-from .views import *
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from home.views import MenuItemSearchViewSet
+
+router = DefaultRouter()
+router.register(r'menu-item', MenuItemSearchViewSet, basename='menuitem-search')
 
 urlpatterns = [
-    path('categories/', MenuCategoryListView.as_view(), name='menu-categories'),
-    
+    path('', include(router.urls)),
 ]
